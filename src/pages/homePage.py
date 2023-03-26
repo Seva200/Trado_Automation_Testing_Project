@@ -1,0 +1,110 @@
+import time
+from src.pages.commonActions import CommonActions
+from src.locators.homePageLcs import home_lcs
+class HomePage(CommonActions):
+# Header
+    def logo_btn_click(self):
+        CommonActions.click_on_locator(self, home_lcs["logo_btn"])
+    def set_search_fld(self, msg):
+        CommonActions.set_locator(self, home_lcs["search_fld"]).send_keys(msg)
+    def search_fld_click(self):
+        HomePage.logo_btn_click(self)
+        time.sleep(1)
+        CommonActions.click_on_locator(self, home_lcs["search_fld"])
+
+    def sign_in_click(self):
+        CommonActions.click_on_locator(self, home_lcs["sign_in_btn"])
+    def sales_btn_click(self):
+        CommonActions.click_on_locator(self, home_lcs["section1"])
+    def dry_products_click(self):
+        CommonActions.click_on_locator(self, home_lcs["section2"])
+    def beauty_products_click(self):
+        CommonActions.click_on_locator(self, home_lcs["section3"])
+    def sweets_and_snacks_click(self):
+        CommonActions.click_on_locator(self, home_lcs["section4"])
+    def kanabis_click(self):
+        CommonActions.click_on_locator(self, home_lcs["section5"])
+    def cleaners_click(self):
+        CommonActions.click_on_locator(self, home_lcs["section6"])
+    def drinks_click(self):
+        CommonActions.click_on_locator(self, home_lcs["section7"])
+    def upload_prod_btn_click(self):
+        CommonActions.click_on_locator(self, home_lcs["upload_prod"])
+
+# Body
+    # Slide Show
+    def left_arrow_click(self):
+        CommonActions.click_on_locator(self, home_lcs["left_arrow"])
+    def right_arrow_click(self):
+        CommonActions.click_on_locator(self, home_lcs["right_arrow"])
+    def section1_click(self):
+        CommonActions.click_on_locator(self, home_lcs["slide1"])
+    def section2_click(self):
+        CommonActions.click_on_locator(self, home_lcs["slide3"])
+    def section3_click(self):
+        CommonActions.click_on_locator(self, home_lcs["slide4"])
+    def section4_click(self):
+        CommonActions.click_on_locator(self, home_lcs["slide4"])
+    def section5_click(self):
+        CommonActions.click_on_locator(self, home_lcs["slide5"])
+    def slide6_click(self):
+        CommonActions.click_on_locator(self, home_lcs["slide6"])
+    def slide7_click(self):
+        CommonActions.click_on_locator(self, home_lcs["slide7"])
+    def slide8_click(self):
+        CommonActions.click_on_locator(self, home_lcs["slide8"])
+    def slide9_click(self):
+        CommonActions.click_on_locator(self, home_lcs["slide9"])
+    def slide10_click(self):
+        CommonActions.click_on_locator(self, home_lcs["slide10"])
+    def tell_me_more_click(self):
+        CommonActions.click_on_locator(self, home_lcs["tell_me_more"])
+    def sort_btn_click(self):
+        CommonActions.click_on_locator(self, home_lcs["sort_select"])
+    def sort_by_popularity_click(self):
+        CommonActions.click_on_locator(self, home_lcs["popular_sort"])
+    def low_to_high_price_click(self):
+        CommonActions.click_on_locator(self, home_lcs["low_to_high_price"])
+    def high_to_low_price_click(self):
+        CommonActions.click_on_locator(self, home_lcs["high_to_low_price"])
+    def list_view1_click(self):
+        CommonActions.click_on_locator(self, home_lcs["list_view1"])
+    def list_view2_click(self):
+        CommonActions.click_on_locator(self, home_lcs["list_view2"])
+    def max_card_link_click(self):
+        CommonActions.click_on_locator(self, home_lcs["max_card_link"])
+    def common_questions_bd_link(self):
+        CommonActions.click_on_locator(self, home_lcs["common_questions_bd"])
+    def contuct_us_bd_link(self):
+        CommonActions.click_on_locator(self, home_lcs["contact_us_bd"])
+    def shipment_works_bd_link(self):
+        CommonActions.click_on_locator(self, home_lcs["shipment_works_bd"])
+    def change_language_btn(self):
+        CommonActions.click_on_locator(self, home_lcs["change_language"])
+
+# Footer
+# Importants
+    def who_we_are_link(self):
+        CommonActions.click_on_locator(self, home_lcs["who_we_are"])
+    def personal_area_link(self):
+        CommonActions.click_on_locator(self, home_lcs["personal_area"])
+    def eTrado_link(self):
+        CommonActions.click_on_locator(self, home_lcs["eTrado"])
+    def contact_us_ftr_link(self):
+        CommonActions.click_on_locator(self, home_lcs["contact_us_ftr"])
+    def business_interface_link(self):
+        CommonActions.click_on_locator(self, home_lcs["business interface"])
+    def common_questions_ftr_link(self):
+        CommonActions.click_on_locator(self, home_lcs["common_questions_ftr"])
+    def shipment_works_ftr_link(self):
+        CommonActions.click_on_locator(self, home_lcs["shipment_works_ftr"])
+    def payment_solutions_link(self):
+        CommonActions.click_on_locator(self, home_lcs["payment_solutions"])
+    def max_for_business_link(self):
+        CommonActions.click_on_locator(self, home_lcs["max_for_business"])
+    def facebook_link(self):
+        CommonActions.click_on_locator(self, home_lcs["facebook"])
+    def instagram_link(self):
+        CommonActions.click_on_locator(self, home_lcs["instagram"])
+    def twitter_link(self):
+        CommonActions.click_on_locator(self, home_lcs["twitter"])

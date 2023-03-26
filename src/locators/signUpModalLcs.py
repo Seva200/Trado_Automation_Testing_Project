@@ -1,0 +1,22 @@
+from selenium.webdriver.common.by import By
+# = (By.CSS_SELECTOR, "")
+sign_up_lcs = dict()
+# Page 1
+sign_up_lcs["x_btn"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > span > i")
+sign_up_lcs["signUp_btn"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > div.login_loginregister > span.login_active")
+sign_up_lcs["facebook"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > div.login_socialLogin > div.login_socialLoginButtons > span > button")
+sign_up_lcs["google"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > div.login_socialLogin > div.login_socialLoginButtons > button")
+sign_up_lcs["twitter"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > div.login_socialLogin > div.login_socialLoginButtons > div")
+sign_up_lcs["phone_fld"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > form > div:nth-child(1) > div:nth-child(1) > span > input[type=tel]")
+sign_up_lcs["bnNum_fld"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > form > div:nth-child(1) > div:nth-child(2) > span > input[type=number]")
+sign_up_lcs["accept_policy"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > form > div:nth-child(1) > div:nth-child(3) > span > span > span > i")
+sign_up_lcs["accept_sent_emails"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > form > div:nth-child(1) > div:nth-child(4) > span > span > span > i")
+sign_up_lcs["logIn_btn"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > form > input")
+# Page 2
+sign_up_lcs["1input_number_fld"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > form > div.form_loginCode > div:nth-child(1) > span > input")
+sign_up_lcs["2input_number_fld"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > form > div.form_loginCode > div:nth-child(2) > span > input")
+sign_up_lcs["3input_number_fld"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > form > div.form_loginCode > div:nth-child(3) > span > input")
+sign_up_lcs["4input_number_fld"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > form > div.form_loginCode > div:nth-child(4) > span > input")
+sign_up_lcs["5input_number_fld"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > form > div.form_loginCode > div:nth-child(5) > span > input")
+sign_up_lcs["verify_btn"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > form > input")
+sign_up_lcs["resent_msg_btn"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > div.login_sms")
