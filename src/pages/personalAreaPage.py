@@ -1,4 +1,4 @@
-from src.pages.commonActions import CommonActions
+from src.utils.commonActions import CommonActions
 from src.locators.personalAreaPageLcs import personal_area_lcs
 class PersonalAreaPage(CommonActions):
 # Delivery Details

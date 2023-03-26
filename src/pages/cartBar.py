@@ -1,4 +1,4 @@
-from src.pages.commonActions import CommonActions
+from src.utils.commonActions import CommonActions
 from src.locators.cartBarLcs import cart_bar_lcs
 class CartBar(CommonActions):
     def cart_clear_btn_click(self):

@@ -1,4 +1,4 @@
-from src.pages.commonActions import CommonActions
+from src.utils.commonActions import CommonActions
 from src.locators.deliveryDetailsPageLcs import deli_dtls_lcs
 class DeliveryDetailsPage(CommonActions):
 # Invoice Details

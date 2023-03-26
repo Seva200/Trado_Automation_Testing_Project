@@ -1,4 +1,4 @@
-from src.pages.commonActions import CommonActions
+from src.utils.commonActions import CommonActions
 from src.locators.paymentsMethodsPageLcs import payments_mthds_lcs
 class PaymentsMethodsPage(CommonActions):
     def credit_card_click(self):

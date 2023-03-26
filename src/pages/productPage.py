@@ -1,4 +1,4 @@
-from src.pages.commonActions import CommonActions
+from src.utils.commonActions import CommonActions
 from src.locators.productPageLcs import product_lcs
 class ProductPage(CommonActions):
     def click_on_product(self):

@@ -1,4 +1,4 @@
-from src.pages.commonActions import CommonActions
+from src.utils.commonActions import CommonActions
 from src.locators.creditCardModalLcs import credit_card_lcs
 class CreditCardModal(CommonActions):
     def x_btn_click(self):

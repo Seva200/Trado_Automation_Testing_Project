@@ -1,4 +1,4 @@
-from src.pages.commonActions import CommonActions
+from src.utils.commonActions import CommonActions
 from src.locators.bankTransferModalLcs import bank_transfer_lcs
 class BankTransferModal(CommonActions):
     def x_btn_click(self):

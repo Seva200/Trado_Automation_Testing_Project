@@ -1,4 +1,4 @@
-from src.pages.commonActions import CommonActions
+from src.utils.commonActions import CommonActions
 from src.locators.signUpModalLcs import sign_up_lcs
 class SignUpModal(CommonActions):
 # Page 1

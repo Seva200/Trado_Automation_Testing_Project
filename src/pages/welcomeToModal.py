@@ -1,4 +1,4 @@
-from src.pages.commonActions import CommonActions
+from src.utils.commonActions import CommonActions
 from src.locators.welcomeToModalLcs import welcome_to_lcs
 class WelcomeToModal(CommonActions):
 

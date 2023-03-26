@@ -1,5 +1,5 @@
 import time
-from src.pages.commonActions import CommonActions
+from src.utils.commonActions import CommonActions
 from src.locators.homePageLcs import home_lcs
 class HomePage(CommonActions):
 # Header
@@ -22,7 +22,7 @@ class HomePage(CommonActions):
         CommonActions.click_on_locator(self, home_lcs["section3"])
     def sweets_and_snacks_click(self):
         CommonActions.click_on_locator(self, home_lcs["section4"])
-    def kanabis_click(self):
+    def cannabis_click(self):
         CommonActions.click_on_locator(self, home_lcs["section5"])
     def cleaners_click(self):
         CommonActions.click_on_locator(self, home_lcs["section6"])
