@@ -27,3 +27,6 @@ class CommonActions:
     def get_attribute_by_title(self, locator):
         attribute = wdw(self.driver, 5).until(ec.visibility_of_element_located(locator)).get_attribute("title")
         return attribute
+    def get_attribute_by_value(self, locator):
+        attribute = wdw(self.driver, 5).until(ec.visibility_of_element_located(locator)).get_attribute("value")
+        return attribute
