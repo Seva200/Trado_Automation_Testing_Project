@@ -163,10 +163,10 @@ def get_specific_key_value(db, collection_name, document_id, key):
     else:
         return None
 
-def sms():
+def sms_code():
     db = create_mongo_connection(user_name, encoded_password, db_name)
     num_code = get_specific_key_value(db, "users", id_user, "loginCode")
     print(num_code)
     return num_code
-sms()
+
 

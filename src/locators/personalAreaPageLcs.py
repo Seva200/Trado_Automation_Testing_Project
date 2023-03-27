@@ -18,3 +18,6 @@ personal_area_lcs["withdraw_btn"] = (By.CSS_SELECTOR, "#root > div > div.pages_p
 personal_area_lcs["order_btn"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.userPersonalArea_userPersonalAreaContainer > div:nth-child(3) > div.userOrders_list > div:nth-child(1)")
 
 personal_area_lcs["support_link"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.userPersonalArea_userPersonalAreaContainer > div.userProducts_userProductsList > div.sectionFooter_sectionFooter > span")
+
+# asserts
+personal_area_lcs["user_product_list"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.userPersonalArea_userPersonalAreaContainer > div.userProducts_userProductsList")

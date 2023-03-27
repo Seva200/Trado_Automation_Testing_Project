@@ -11,6 +11,7 @@ from src.pages.productPage import ProductPage
 from src.pages.signInModal import SignInModal
 from src.pages.signUpModal import SignUpModal
 from src.pages.welcomeToModal import WelcomeToModal
+from src.utils.commonActions import CommonActions
 class EdgeDriverSetUp:
     @pytest.fixture()
     def driver(self):
@@ -31,6 +32,7 @@ class EdgeDriverSetUp:
         self.sign_in_modal = SignInModal(driver)
         self.sign_up_modal = SignUpModal(driver)
         self.welcome_to_modal = WelcomeToModal(driver)
+        self.common_actions = CommonActions(driver)
         yield driver
         driver.quit()
         

@@ -1,7 +1,9 @@
 import time
 from src.utils.commonActions import CommonActions
 from src.locators.homePageLcs import home_lcs
+from selenium.webdriver.common.keys import Keys
 class HomePage(CommonActions):
+
 # Header
     def logo_btn_click(self):
         CommonActions.click_on_locator(self, home_lcs["logo_btn"])
@@ -37,15 +39,15 @@ class HomePage(CommonActions):
         CommonActions.click_on_locator(self, home_lcs["left_arrow"])
     def right_arrow_click(self):
         CommonActions.click_on_locator(self, home_lcs["right_arrow"])
-    def section1_click(self):
+    def slide1_click(self):
         CommonActions.click_on_locator(self, home_lcs["slide1"])
-    def section2_click(self):
+    def slide2_click(self):
         CommonActions.click_on_locator(self, home_lcs["slide3"])
-    def section3_click(self):
+    def slide3_click(self):
         CommonActions.click_on_locator(self, home_lcs["slide4"])
-    def section4_click(self):
+    def slide4_click(self):
         CommonActions.click_on_locator(self, home_lcs["slide4"])
-    def section5_click(self):
+    def slide5_click(self):
         CommonActions.click_on_locator(self, home_lcs["slide5"])
     def slide6_click(self):
         CommonActions.click_on_locator(self, home_lcs["slide6"])
@@ -53,10 +55,6 @@ class HomePage(CommonActions):
         CommonActions.click_on_locator(self, home_lcs["slide7"])
     def slide8_click(self):
         CommonActions.click_on_locator(self, home_lcs["slide8"])
-    def slide9_click(self):
-        CommonActions.click_on_locator(self, home_lcs["slide9"])
-    def slide10_click(self):
-        CommonActions.click_on_locator(self, home_lcs["slide10"])
     def tell_me_more_click(self):
         CommonActions.click_on_locator(self, home_lcs["tell_me_more"])
     def sort_btn_click(self):
@@ -75,7 +73,7 @@ class HomePage(CommonActions):
         CommonActions.click_on_locator(self, home_lcs["max_card_link"])
     def common_questions_bd_link(self):
         CommonActions.click_on_locator(self, home_lcs["common_questions_bd"])
-    def contuct_us_bd_link(self):
+    def contact_us_bd_link(self):
         CommonActions.click_on_locator(self, home_lcs["contact_us_bd"])
     def shipment_works_bd_link(self):
         CommonActions.click_on_locator(self, home_lcs["shipment_works_bd"])
@@ -94,6 +92,7 @@ class HomePage(CommonActions):
         CommonActions.click_on_locator(self, home_lcs["contact_us_ftr"])
     def business_interface_link(self):
         CommonActions.click_on_locator(self, home_lcs["business interface"])
+# Additionals
     def common_questions_ftr_link(self):
         CommonActions.click_on_locator(self, home_lcs["common_questions_ftr"])
     def shipment_works_ftr_link(self):
@@ -102,9 +101,17 @@ class HomePage(CommonActions):
         CommonActions.click_on_locator(self, home_lcs["payment_solutions"])
     def max_for_business_link(self):
         CommonActions.click_on_locator(self, home_lcs["max_for_business"])
+# Stay in Touch
     def facebook_link(self):
         CommonActions.click_on_locator(self, home_lcs["facebook"])
     def instagram_link(self):
         CommonActions.click_on_locator(self, home_lcs["instagram"])
     def twitter_link(self):
         CommonActions.click_on_locator(self, home_lcs["twitter"])
+    def term_of_use_link(self):
+        CommonActions.click_on_locator(self, home_lcs["terms_of_use"])
+    def privacy_policy_link(self):
+        CommonActions.click_on_locator(self, home_lcs["privacy_policy"])
+    def accessibility_statement_link(self):
+        CommonActions.click_on_locator(self, home_lcs["accessibility_statement"])
+
