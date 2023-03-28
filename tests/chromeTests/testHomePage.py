@@ -27,13 +27,17 @@ class TestHomePage(ChromeDriverSetUp):
         self.home_page.search_fld_click()
         assert self.common_actions.get_attribute_by_textcontent(home_lcs["search_results_amount"]) == "0 תוצאות"
     def test_personal_area_btn(self, driver):
-        self.sign_in_modal.log_in()
-        self.home_page.personal_area_link()
+        self.sign_in_modal.sign_in()
+        self.home_page.personal_area_hdr_click()
+        assert driver.current_url == "https://qa.trado.co.il/user/personalArea"
+    def test2_personal_area_btn(self, driver):
+        self.sign_in_modal.sign_in()
+        self.home_page.personal_area_hdr_click()
         assert driver.current_url == "https://qa.trado.co.il/user/personalArea"
         assert self.common_actions.get_attribute_by_class(personal_area_lcs["user_product_list"]) == "userProducts_userProductsList "
         self.home_page.logo_btn_click()
         assert driver.current_url == "https://qa.trado.co.il/"
-        self.home_page.personal_area_link()
+        self.home_page.personal_area_hdr_click()
         sleep(2)
         assert self.common_actions.get_attribute_by_class(personal_area_lcs["user_product_list"]) == "userProducts_userProductsList "
     def test_sales_btn(self, driver):
@@ -67,7 +71,7 @@ class TestHomePage(ChromeDriverSetUp):
         self.home_page.drinks_click()
         assert self.common_actions.get_attribute_by_innertext(home_lcs["page_title"]) == "משקאות"
     def test_upload_products_click(self, driver):
-        self.sign_in_modal.log_in()
+        self.sign_in_modal.sign_in()
         self.home_page.upload_prod_btn_click()
         assert self.common_actions.get_attribute_by_class(home_lcs["modal_open"]) == "modal_modalWrapper false modal_open    "
         assert self.common_actions.get_attribute_by_textcontent(home_lcs["upload_title"]) == " הוספת מוצר חדש "

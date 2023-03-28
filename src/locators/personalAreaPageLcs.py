@@ -11,7 +11,8 @@ personal_area_lcs["bn_id_num"] = (By.CSS_SELECTOR, "#root > div > div.pages_page
 # Business Details
 personal_area_lcs["city_&_street_fld"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.userAddressForm_userAddressForm.userAddressForm_userAddressFormPersonal > form > div:nth-child(2) > div > div.form_formGroup.userAddressForm_addressBAF > div:nth-child(1) > input")
 personal_area_lcs["num_fld"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.userAddressForm_userAddressForm.userAddressForm_userAddressFormPersonal > form > div:nth-child(2) > div > div.form_formGroup.userAddressForm_addressBAF > div:nth-child(2) > span > input[type=number]")
-personal_area_lcs["edit_btn"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.userAddressForm_userAddressForm.userAddressForm_userAddressFormPersonal > form > input")
+personal_area_lcs["edit_btn"] = (By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div[3]/form/div[4]')
+personal_area_lcs["save_btn"] = (By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div[3]/form/input ')
 # My Wallet
 personal_area_lcs["withdraw_btn"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.userPersonalArea_userPersonalAreaContainer > div.userWallet_userWallet > section > button")
 # 4 Latest Orders
@@ -21,3 +22,11 @@ personal_area_lcs["support_link"] = (By.CSS_SELECTOR, "#root > div > div.pages_p
 
 # asserts
 personal_area_lcs["user_product_list"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.userPersonalArea_userPersonalAreaContainer > div.userProducts_userProductsList")
+personal_area_lcs["street_num_inv_msg"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.userAddressForm_userAddressForm.userAddressForm_userAddressFormPersonal > form > div:nth-child(2) > div > div.form_formGroup.userAddressForm_addressBAF > div:nth-child(2) > div")
+personal_area_lcs["invalid_email_msg"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.userAddressForm_userAddressForm.userAddressForm_userAddressFormPersonal > form > div:nth-child(1) > div:nth-child(4) > div")
+personal_area_lcs["inv_phone_num_msg"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.userAddressForm_userAddressForm.userAddressForm_userAddressFormPersonal > form > div:nth-child(1) > div:nth-child(3) > div")
+personal_area_lcs["fname_inv_msg"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.userAddressForm_userAddressForm.userAddressForm_userAddressFormPersonal > form > div:nth-child(1) > div:nth-child(1) > div")
+personal_area_lcs["lname_inv_msg"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.userAddressForm_userAddressForm.userAddressForm_userAddressFormPersonal > form > div:nth-child(1) > div:nth-child(2) > div")
+personal_area_lcs["inv_bn_msg"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.userAddressForm_userAddressForm.userAddressForm_userAddressFormPersonal > form > div:nth-child(1) > div:nth-child(5) > div")
+personal_area_lcs[""] = (By.CSS_SELECTOR, "")
+personal_area_lcs[""] = (By.CSS_SELECTOR, "")
