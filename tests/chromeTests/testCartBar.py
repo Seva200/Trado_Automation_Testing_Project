@@ -15,9 +15,14 @@ class TestCartBar(ChromeDriverSetUp):
         self.product_page.add_1item()
         assert self.common_actions.get_attribute_by_value(cart_bar_lcs["items_amount_fld"]) == "1"
         self.cart_bar.bucket_btn_click()
-        sleep(1)
+        sleep(0.06)
         assert self.common_actions.get_attribute_by_class(cart_bar_lcs["cart_is_empty"]) == "cart_emptyCart"
-
+    def test_cart_clear_btn(self, driver):
+        self.welcome_to_modal.choose_coktails()
+        self.product_page.add_1item()
+        assert self.common_actions.get_attribute_by_value(cart_bar_lcs["items_amount_fld"]) == "1"
+        self.cart_bar.cart_clear_btn_click()
+        assert self.common_actions.get_attribute_by_class(cart_bar_lcs["cart_is_empty"]) == "cart_emptyCart"
     def test_validation_of_item_in_the_cart(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.product_page.add_1item()
@@ -28,18 +33,18 @@ class TestCartBar(ChromeDriverSetUp):
         self.welcome_to_modal.choose_coktails()
         self.product_page.add_1item()
         assert self.common_actions.get_attribute_by_value(cart_bar_lcs["items_amount_fld"]) == "1"
-        while self.common_actions.get_attribute_by_value(cart_bar_lcs["items_amount_fld"]) < "4":
-            self.product_page.plus_btn_click()
-        sleep(1)
-        assert self.common_actions.get_attribute_by_value(cart_bar_lcs["items_amount_fld"]) == "4"
+        self.cart_bar.add_4items()
+        sleep(0.06)
+        assert self.common_actions.get_attribute_by_value(cart_bar_lcs["items_amount_fld"]) == "5"
 
     def test_decreasing_count_of_items(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.product_page.add_1item()
-        while self.common_actions.get_attribute_by_value(cart_bar_lcs["items_amount_fld"]) < "9":
-            self.product_page.plus_btn_click()
-        self.product_page.minus_btn_click()
-        sleep(2)
-        assert self.common_actions.get_attribute_by_value(cart_bar_lcs["items_amount_fld"]) == "8"
+        assert self.common_actions.get_attribute_by_value(cart_bar_lcs["items_amount_fld"]) == "1"
+        self.cart_bar.add_4items()
+        self.cart_bar.minus_2items()
+        sleep(0.06)
+        assert self.common_actions.get_attribute_by_value(cart_bar_lcs["items_amount_fld"]) == "3"
+
 
 
