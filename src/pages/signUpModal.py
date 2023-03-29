@@ -17,11 +17,11 @@ class SignUpModal(CommonActions):
     def set_bn_number(self, bnnumber):
         CommonActions.set_locator(self, sign_up_lcs["bnNum_fld"]).send_keys(bnnumber)
     def accept_policy(self):
-        CommonActions.click_on_locator(self, sign_up_lcs["accept_policy"])
+        CommonActions.click_on_visible_locator_ac(self, sign_up_lcs["accept_policy"])
     def accept_sent_emails(self):
         CommonActions.click_on_locator(self, sign_up_lcs["accept_sent_emails"])
     def log_in_btn_click(self):
-        CommonActions.click_on_locator(self, sign_up_lcs["logIn_btn"])
+        CommonActions.click_on_visible_locator_ac(self, sign_up_lcs["logIn_btn"])
 # Page 2
     def set_1_num(self, num):
         CommonActions.set_locator(self, sign_up_lcs["1input_number_fld"]).send_keys(num)
