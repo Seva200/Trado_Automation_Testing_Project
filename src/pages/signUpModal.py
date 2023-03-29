@@ -7,11 +7,11 @@ class SignUpModal(CommonActions):
     def sign_up_btn_click(self):
         CommonActions.click_on_locator(self, sign_up_lcs["signUp_btn"])
     def facebook_link(self):
-        CommonActions.click_on_locator_ac(self, sign_up_lcs["facebook"])
+        CommonActions.click_on_visible_locator_ac(self, sign_up_lcs["facebook"])
     def google_link(self):
-        CommonActions.click_on_locator_ac(self, sign_up_lcs["google"])
+        CommonActions.click_on_visible_locator_ac(self, sign_up_lcs["google"])
     def twitter_link(self):
-        CommonActions.click_on_locator_ac(self, sign_up_lcs["twitter"])
+        CommonActions.click_on_visible_locator_ac(self, sign_up_lcs["twitter"])
     def set_phone_number(self, phonenumber):
         CommonActions.set_locator(self, sign_up_lcs["phone_fld"]).send_keys(phonenumber)
     def set_bn_number(self, bnnumber):
