@@ -61,9 +61,20 @@ class DeliveryDetailsPage(CommonActions):
     def set_last_name(self, lastname):
         CommonActions.set_locator(self, deli_dtls_lcs["last_name_fld"]).clear()
         CommonActions.set_locator(self, deli_dtls_lcs["last_name_fld"]).send_keys(lastname)
-    def set_number_adrs(self, number):
+    def set_phone_adrs(self, number):
         CommonActions.set_locator(self, deli_dtls_lcs["number_adrs_fld"]).clear()
         CommonActions.set_locator(self, deli_dtls_lcs["number_adrs_fld"]).send_keys(number)
+    def set_address_details(self, city, street, streetnum, entrance, floor, contactname, fname, lname, phone):
+        DeliveryDetailsPage.set_city_adrs(self, city)
+        DeliveryDetailsPage.set_street_adrs(self, street)
+        DeliveryDetailsPage.set_street_num_adrs(self, streetnum)
+        DeliveryDetailsPage.set_entrance_adrs(self, entrance)
+        DeliveryDetailsPage.set_floor_adrs(self, floor)
+        DeliveryDetailsPage.set_contact_name(self, contactname)
+        DeliveryDetailsPage.set_first_name(self, fname)
+        DeliveryDetailsPage.set_last_name(self, lname)
+        DeliveryDetailsPage.set_phone_adrs(self, phone)
+
     def complete_purchase_btn_click(self):
         CommonActions.click_on_locator(self, deli_dtls_lcs["complete_purchase"])
     def buy_more_btn_click(self):
