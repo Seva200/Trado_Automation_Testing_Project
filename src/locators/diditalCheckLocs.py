@@ -1,0 +1,17 @@
+from selenium.webdriver.common.by import By
+# digital_check_lcs[""] = (By.CSS_SELECTOR, "")
+digital_check_lcs = dict()
+
+digital_check_lcs["x_btn"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > span")
+digital_check_lcs["bank_name_btn"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > form > section > div:nth-child(1) > select")
+digital_check_lcs["bank_branch_fld"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > form > section > div:nth-child(2) > input[type=text]")
+digital_check_lcs["acc_num_fld"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > form > section > div:nth-child(3) > input[type=text]")
+digital_check_lcs["acc_holder_name_fld"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > form > section > div:nth-child(4) > input[type=text]")
+digital_check_lcs["immediate_payment_btn"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > form > div.checkout-form_ongoingPayment > div > label.checkout-form_shotefLabel.checkout-form_activeShotef")
+digital_check_lcs["flowing_+_30"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > form > div.checkout-form_ongoingPayment > div > label:nth-child(2)")
+digital_check_lcs["flowing_+_60"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > form > div.checkout-form_ongoingPayment > div > label:nth-child(3)")
+digital_check_lcs["flowing_+_90"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > form > div.checkout-form_ongoingPayment > div > label:nth-child(4)")
+digital_check_lcs["insert_the_check_btn"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > form > button")
+digital_check_lcs[""] = (By.CSS_SELECTOR, "")
+digital_check_lcs[""] = (By.CSS_SELECTOR, "")
+digital_check_lcs[""] = (By.CSS_SELECTOR, "")

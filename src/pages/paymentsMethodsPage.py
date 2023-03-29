@@ -11,6 +11,8 @@ class PaymentsMethodsPage(CommonActions):
         CommonActions.click_on_locator(self, payments_mthds_lcs["bank_transfer"])
     def fin_trado_click(self):
         CommonActions.click_on_locator(self, payments_mthds_lcs["fin_trado"])
+    def purchase_btn_click(self):
+        CommonActions.click_on_locator(self, payments_mthds_lcs["purchase"])
     def go_back_btn_click(self):
         CommonActions.click_on_locator(self, payments_mthds_lcs["go_back"])
     def thank_you_back_home_btn_click(self):
