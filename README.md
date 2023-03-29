@@ -27,9 +27,9 @@ Meaning I had to assess how valid is the website to operate successfully?
 * locators.py is a file which indexes elements in the webpage
 
 ### Software and Hardware requirements
-* Python Version: 3.10 \
-* IDE: PyCharm Community Edition 2022.3 \
-* Python Packages: Selenium, Pytest, Allure-pytest, Pymongo, Request, Locust \
-* Browsers: Google Chrome, Microsoft Edge \
+* Python Version: 3.10 
+* IDE: PyCharm Community Edition 2022.3 
+* Python Packages: Selenium, Pytest, Allure-pytest, Pymongo, Request, Locust 
+* Browsers: Google Chrome, Microsoft Edge 
 * Operating System: Windows 11
 
