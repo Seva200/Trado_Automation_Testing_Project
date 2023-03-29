@@ -6,7 +6,7 @@ home_lcs = dict()
 home_lcs["logo_btn"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > header > div > div > a.header_logoLink > div > a > img")
 home_lcs["search_fld"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > header > div > div > div > span > input")
 home_lcs["sign_in_btn"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > header > div > div > a.header_userAreaLink > span:nth-child(2)")
-home_lcs["log_out_btn"] = (By.XPATH, '//*[@id="root"]/div/div[2]/header/div/div/a[2]')
+home_lcs["log_out_btn"] = (By.CLASS_NAME, 'header_logOut')
 home_lcs["personal_area_hdr"] = (By.CSS_SELECTOR, '#root > div > div.pages_pages > header > div > div > a.header_userAreaLink > span:nth-child(2)')
 home_lcs["section1"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div > div:nth-child(1) > div > div > div.verticalMenu_verticalMenuList > a:nth-child(1)")
 home_lcs["section2"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div > div:nth-child(1) > div > div > div.verticalMenu_verticalMenuList > a:nth-child(2)")
@@ -78,6 +78,6 @@ home_lcs["product_list_actv"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages
 home_lcs["questions_pg_title"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.questions_header > div > h4")
 home_lcs["contact_pg_title"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div:nth-child(1) > h4")
 home_lcs["shipment_pg_title"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div > div.shipment_header > div")
-home_lcs["hello_msg"] = (By.CSS_SELECTOR, '#root > div > div.pages_pages > header > div > div > a.header_userAreaLink')
+home_lcs["hello_user_msg"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > header > div > div > a.header_userAreaLink")
 
 

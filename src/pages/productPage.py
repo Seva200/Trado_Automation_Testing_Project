@@ -7,10 +7,10 @@ class ProductPage(CommonActions):
         CommonActions.click_on_locator(self, product_lcs["product_btn"])
 
     def plus_btn_click(self):
-        CommonActions.click_on_locator_ac(self, product_lcs["plus_btn"])
+        CommonActions.click_on_visible_locator_ac(self, product_lcs["plus_btn"])
 
     def minus_btn_click(self):
-        CommonActions.click_on_locator_ac(self, product_lcs["minus_btn"])
+        CommonActions.click_on_visible_locator_ac(self, product_lcs["minus_btn"])
     def set_product_amount(self, amount):
         CommonActions.set_locator(self, product_lcs["product_amount_fld"]).send_keys(amount)
 

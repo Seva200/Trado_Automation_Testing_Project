@@ -10,9 +10,9 @@ class HomePage(CommonActions):
     def set_search_fld(self, msg):
         CommonActions.set_locator(self, home_lcs["search_fld"]).send_keys(msg)
     def log_out_btn_click(self):
-        CommonActions.click_on_locator_ac(self, home_lcs["log_out_btn"])
+        CommonActions.click_on_invis_locator_ac(self, home_lcs["log_out_btn"])
     def personal_area_hdr_click(self):
-        CommonActions.click_on_locator_ac(self, home_lcs["personal_area_hdr"])
+        CommonActions.click_on_visible_locator_ac(self, home_lcs["personal_area_hdr"])
 
     def search_fld_click(self):
         HomePage.logo_btn_click(self)
@@ -83,7 +83,7 @@ class HomePage(CommonActions):
     def shipment_works_bd_link(self):
         CommonActions.click_on_locator(self, home_lcs["shipment_works_bd"])
     def change_language_btn(self):
-        CommonActions.click_on_locator_ac(self, home_lcs["change_language"])
+        CommonActions.click_on_visible_locator_ac(self, home_lcs["change_language"])
 
 # Footer
 # Importants

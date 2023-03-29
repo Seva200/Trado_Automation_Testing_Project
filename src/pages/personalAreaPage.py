@@ -28,9 +28,9 @@ class PersonalAreaPage(CommonActions):
         CommonActions.set_locator(self, personal_area_lcs["num_fld"]).clear()
         CommonActions.set_locator(self, personal_area_lcs["num_fld"]).send_keys(num)
     def edit_btn_click(self):
-        CommonActions.click_on_locator_ac(self, personal_area_lcs["edit_btn"])
+        CommonActions.click_on_visible_locator_ac(self, personal_area_lcs["edit_btn"])
     def save_btn_click(self):
-        CommonActions.click_on_locator_ac(self, personal_area_lcs["save_btn"])
+        CommonActions.click_on_visible_locator_ac(self, personal_area_lcs["save_btn"])
     def edit_personal_area(self, fname, lname, phone, email, bnid, city_and_street, street_num):
         PersonalAreaPage.edit_btn_click(self)
         PersonalAreaPage.set_first_name(self, fname)
