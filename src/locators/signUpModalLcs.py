@@ -29,4 +29,6 @@ sign_up_lcs["bnnum_div"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapp
 sign_up_lcs["choose_cocktail"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > div > div.login_interestsContainer > div:nth-child(1)")
 sign_up_lcs["choose_rest"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > div > div.login_interestsContainer > div:nth-child(2)")
 sign_up_lcs["create_acc_btn"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > div > div:nth-child(3) > button")
+sign_up_lcs["invalid_code_msg"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > div > div > div > form > div.form_message")
+sign_up_lcs[""] = (By.CSS_SELECTOR, "")
 sign_up_lcs[""] = (By.CSS_SELECTOR, "")

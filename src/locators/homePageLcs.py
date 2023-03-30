@@ -79,5 +79,6 @@ home_lcs["questions_pg_title"] = (By.CSS_SELECTOR, "#root > div > div.pages_page
 home_lcs["contact_pg_title"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div:nth-child(1) > h4")
 home_lcs["shipment_pg_title"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div > div.shipment_header > div")
 home_lcs["hello_user_msg"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > header > div > div > a.header_userAreaLink")
+home_lcs["person_area_link"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > header > div > div > a.header_userAreaLink > span:nth-child(2)")
 
 
