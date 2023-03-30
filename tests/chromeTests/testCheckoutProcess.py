@@ -232,7 +232,22 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["payments_methods_status"]) \
                != "orderTimeline_time orderTimeline_current orderTimeline_current "
 
-    def test_complete_invalid_purchase1(self, driver):
+    # def test_execute_valid_card_purchase(self, driver):
+    #     self.sign_in_modal.sign_in()
+    #     self.product_page.add_1item()
+    #     self.cart_bar.check_out_btn_click()
+    #     assert driver.current_url == "https://qa.trado.co.il/checkout"
+    #     assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
+    #            == "orderTimeline_time orderTimeline_current orderTimeline_current "
+    #     assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678987"
+    #     self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678987", "jhongrey89@mail.com", "Paris",
+    #                                                    "Baget", "3", "a", "2")
+    #     self.delivery_details_page.complete_purchase_btn_click()
+    #     self.payments_methods_page.credit_card_click()
+    #     self.credit_card_modal.set_cvv("123")
+    #     sleep(3)
+
+    def test_execute_invalid_purchase1(self, driver):
         self.sign_in_modal.sign_in()
         self.product_page.add_1item()
         self.cart_bar.check_out_btn_click()

@@ -2,7 +2,7 @@ from time import sleep
 from src.utils.drivers.chromeDriverSetUp import ChromeDriverSetUp
 from src.locators.signInModalLcs import sign_in_lcs
 from src.locators.homePageLcs import home_lcs
-from src.utils.PymongoSetUp import sms_code
+from src.utils.pyMongoSetUp.signInSetUp import sms_code
 
 class TestSignInModal(ChromeDriverSetUp):
 

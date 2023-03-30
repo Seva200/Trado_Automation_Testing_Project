@@ -56,5 +56,8 @@ class TestSignUpModal(ChromeDriverSetUp):
         self.sign_up_modal.log_in_btn_click()
         assert self.common_actions.get_attribute_by_textcontent(sign_up_lcs["no_accept_policy"]) == "please approve our policy "
 
-
+    def test_sign_up(self, driver):
+        self.sign_up_modal.set_sign_up()
+        self.sign_up_modal.cocktails_btn_click()
+        self.sign_up_modal.create_acc_btn_click()
 
