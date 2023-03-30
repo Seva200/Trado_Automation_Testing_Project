@@ -1,8 +1,40 @@
 from time import sleep
+import random
 from src.utils.drivers.chromeDriverSetUp import ChromeDriverSetUp
+from src.utils.pyMongoSetUp.signUpSetUp import phone_num, code
 from src.locators.signUpModalLcs import sign_up_lcs
+from src.locators.homePageLcs import home_lcs
 
 class TestSignUpModal(ChromeDriverSetUp):
+    def test_valid_sign_up(self, driver):
+        self.welcome_to_modal.choose_coktails()
+        assert self.common_actions.get_attribute_by_textcontent(home_lcs["person_area_link"]) == " התחברות "
+        self.home_page.sign_in_click()
+        self.sign_up_modal.sign_up_btn_click()
+        self.sign_up_modal.set_phone_number(phone_num)
+        self.sign_up_modal.set_bn_number(f'4030{random.randint(0,99999)}')
+        self.sign_up_modal.accept_policy()
+        self.sign_up_modal.log_in_btn_click()
+        sleep(2)
+        self.sign_up_modal.set_1_num(code())
+        self.sign_up_modal.verify_btn_click()
+        self.sign_up_modal.cocktails_btn_click()
+        assert self.common_actions.get_attribute_by_textcontent(home_lcs["person_area_link"]) == " אזור אישי "
+
+    def test_sign_up_with_invalid_code(self, driver):
+        self.welcome_to_modal.choose_coktails()
+        assert self.common_actions.get_attribute_by_textcontent(home_lcs["person_area_link"]) == " התחברות "
+        self.home_page.sign_in_click()
+        self.sign_up_modal.sign_up_btn_click()
+        self.sign_up_modal.set_phone_number(phone_num)
+        self.sign_up_modal.set_bn_number(f'4030{random.randint(0, 99999)}')
+        self.sign_up_modal.accept_policy()
+        self.sign_up_modal.log_in_btn_click()
+        sleep(2)
+        self.sign_up_modal.set_code(1,2,3,4,5)
+        self.sign_up_modal.verify_btn_click()
+        assert self.common_actions.get_attribute_by_textcontent(sign_up_lcs["invalid_code_msg"]) == "failed to login "
+
     def test_sign_up_invalid_phone_num1(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.sign_in_click()
@@ -45,7 +77,7 @@ class TestSignUpModal(ChromeDriverSetUp):
         self.welcome_to_modal.choose_coktails()
         self.home_page.sign_in_click()
         self.sign_up_modal.sign_up_btn_click()
-        self.sign_up_modal.set_bn_number("1" * 9)
+        self.sign_up_modal.set_bn_number("1" * 10)
         assert "ח.פ לא תקין" in self.common_actions.get_attribute_by_textcontent(sign_up_lcs["bnnum_div"])
 
     def test_sign_up_with_no_policy_accept(self, driver):
@@ -56,8 +88,5 @@ class TestSignUpModal(ChromeDriverSetUp):
         self.sign_up_modal.log_in_btn_click()
         assert self.common_actions.get_attribute_by_textcontent(sign_up_lcs["no_accept_policy"]) == "please approve our policy "
 
-    def test_sign_up(self, driver):
-        self.sign_up_modal.set_sign_up()
-        self.sign_up_modal.cocktails_btn_click()
-        self.sign_up_modal.create_acc_btn_click()
+
 

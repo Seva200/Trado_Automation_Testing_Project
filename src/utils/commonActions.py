@@ -9,6 +9,8 @@ class CommonActions:
 
     def set_locator(self, locator):
         return wdw(self.driver, 5).until(ec.visibility_of_element_located(locator))
+    def set_locator_invis(self, locator):
+        return wdw(self.driver, 5).until(ec.frame_to_be_available_and_switch_to_it(locator))
 
     def click_on_locator(self, locator):
         return wdw(self.driver, 5).until(ec.visibility_of_element_located(locator)).click()

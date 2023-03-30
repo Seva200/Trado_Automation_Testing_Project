@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 credit_card_lcs = dict()
 
 credit_card_lcs["x_btn"] = (By.CSS_SELECTOR, "#root > div > div.modal_modalWrapper.false.modal_open > div > span")
-credit_card_lcs["card_num_fld"] = (By.CSS_SELECTOR, '#credit-card-input')
+credit_card_lcs["card_num_fld"] = (By.XPATH, '/html/body/form/div[3]/fieldset/div[1]/input')
 credit_card_lcs["id_num_fld"] = (By.CSS_SELECTOR, "#userId-input")
 # Card validity
 credit_card_lcs["month"] = (By.CSS_SELECTOR, "#expmonth")

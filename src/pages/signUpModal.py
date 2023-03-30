@@ -41,16 +41,25 @@ class SignUpModal(CommonActions):
         CommonActions.set_locator(self, sign_up_lcs["4input_number_fld"]).send_keys(num)
     def set_5_num(self, num):
         CommonActions.set_locator(self, sign_up_lcs["5input_number_fld"]).send_keys(num)
+    def set_code(self, num1, num2, num3, num4, num5):
+        SignUpModal.set_1_num(self, num1)
+        SignUpModal.set_2_num(self, num2)
+        SignUpModal.set_3_num(self, num3)
+        SignUpModal.set_4_num(self, num4)
+        SignUpModal.set_5_num(self, num5)
     def verify_btn_click(self):
         CommonActions.click_on_locator(self, sign_up_lcs["verify_btn"])
     def resent_msg_btn_click(self):
         CommonActions.click_on_locator(self, sign_up_lcs["resent_msg_btn"])
-    def cocktails_btn_click(self):
-        CommonActions.click_on_locator(self, sign_up_lcs["choose_cocktail"])
-    def rest_btn_click(self):
-        CommonActions.click_on_locator(self, sign_up_lcs["choose_rest"])
     def create_acc_btn_click(self):
         CommonActions.click_on_locator(self, sign_up_lcs["create_acc_btn"])
+    def cocktails_btn_click(self):
+        CommonActions.click_on_locator(self, sign_up_lcs["choose_cocktail"])
+        SignUpModal.create_acc_btn_click(self)
+    def rest_btn_click(self):
+        CommonActions.click_on_locator(self, sign_up_lcs["choose_rest"])
+        SignUpModal.create_acc_btn_click(self)
+
 
     def set_sign_up(self):
         wdw(self.driver, 5).until(ec.visibility_of_element_located((By.XPATH, "/html/body/div/div/div[4]/div/div/div/button"))).click()

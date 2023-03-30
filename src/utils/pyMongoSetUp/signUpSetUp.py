@@ -7,7 +7,7 @@ password = "veHt1JK5"
 encoded_password = quote(password)
 user_name = 'qa_agency'
 db_name = "trado_qa"
-phone_num = f'059{random.randint(0,9)}{random.randint(0,9)}'*2
+phone_num = f'059{random.randint(111111,9999999)}'
 
 def create_mongo_connection(user_name, encoded_password, db_name):
     # Connect to MongoDB using the given credentials and return the database object
