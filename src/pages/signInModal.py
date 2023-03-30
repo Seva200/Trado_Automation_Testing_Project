@@ -3,7 +3,7 @@ from src.locators.signInModalLcs import sign_in_lcs
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait as wdw
 from selenium.webdriver.support import expected_conditions as ec
-from src.utils.PymongoSetUp import sms_code
+from src.utils.pyMongoSetUp.signInSetUp import sms_code
 class SignInModal(CommonActions):
     def sign_in_btn_click(self):
         CommonActions.click_on_visible_locator_ac(self, sign_in_lcs["sign_in_btn"])
