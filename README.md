@@ -1,4 +1,4 @@
-# Automation_Testing_Project_Trado
+# Trado_Automation_Testing_Project
 Creator: Artem \
 Date: 23/03/23
 
