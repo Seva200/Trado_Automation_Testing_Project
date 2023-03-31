@@ -17,7 +17,7 @@ class DeliveryDetailsPage(CommonActions):
     def set_steet_inv(self, street):
         CommonActions.set_locator(self, deli_dtls_lcs["street_inv_fld"]).clear()
         CommonActions.set_locator(self, deli_dtls_lcs["street_inv_fld"]).send_keys(street)
-    def set_street_num_inv(self, strnum):
+    def set_house_num_inv(self, strnum):
         CommonActions.set_locator(self, deli_dtls_lcs["num_inv_fld"]).clear()
         CommonActions.set_locator(self, deli_dtls_lcs["num_inv_fld"]).send_keys(strnum)
     def set_entrance_inv(self, entrncenum):
@@ -32,7 +32,7 @@ class DeliveryDetailsPage(CommonActions):
         DeliveryDetailsPage.set_email(self, email)
         DeliveryDetailsPage.set_city_inv(self, city)
         DeliveryDetailsPage.set_steet_inv(self, street)
-        DeliveryDetailsPage.set_street_num_inv(self, strnum)
+        DeliveryDetailsPage.set_house_num_inv(self, strnum)
         DeliveryDetailsPage.set_entrance_inv(self, entrancenum)
         DeliveryDetailsPage.set_floor_inv(self, floornum)
 
@@ -43,8 +43,8 @@ class DeliveryDetailsPage(CommonActions):
     def set_street_adrs(self, street):
         CommonActions.set_locator(self, deli_dtls_lcs["street_adrs_fld"]).clear()
         CommonActions.set_locator(self, deli_dtls_lcs["street_adrs_fld"]).send_keys(street)
-    def set_street_num_adrs(self, num):
-        CommonActions.set_locator(self, deli_dtls_lcs["num_adrs_fld"]).sclear()
+    def set_house_num_adrs(self, num):
+        CommonActions.set_locator(self, deli_dtls_lcs["num_adrs_fld"]).clear()
         CommonActions.set_locator(self, deli_dtls_lcs["num_adrs_fld"]).send_keys(num)
     def set_entrance_adrs(self, entrance):
         CommonActions.set_locator(self, deli_dtls_lcs["entrance_adrs_fld"]).clear()
@@ -67,7 +67,7 @@ class DeliveryDetailsPage(CommonActions):
     def set_address_details(self, city, street, streetnum, entrance, floor, contactname, fname, lname, phone):
         DeliveryDetailsPage.set_city_adrs(self, city)
         DeliveryDetailsPage.set_street_adrs(self, street)
-        DeliveryDetailsPage.set_street_num_adrs(self, streetnum)
+        DeliveryDetailsPage.set_house_num_adrs(self, streetnum)
         DeliveryDetailsPage.set_entrance_adrs(self, entrance)
         DeliveryDetailsPage.set_floor_adrs(self, floor)
         DeliveryDetailsPage.set_contact_name(self, contactname)
