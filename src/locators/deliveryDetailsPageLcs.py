@@ -20,7 +20,7 @@ deli_dtls_lcs["contact_name_fld"] = (By.CSS_SELECTOR, "#root > div > div.pages_p
 deli_dtls_lcs["first_name_fld"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.checkout_checkout > div > div.steps_steps.checkout_steps > form > section:nth-child(2) > div:nth-child(3) > div:nth-child(2) > input")
 deli_dtls_lcs["last_name_fld"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.checkout_checkout > div > div.steps_steps.checkout_steps > form > section:nth-child(2) > div:nth-child(3) > div:nth-child(3) > input")
 deli_dtls_lcs["number_adrs_fld"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.checkout_checkout > div > div.steps_steps.checkout_steps > form > section:nth-child(2) > div:nth-child(3) > div:nth-child(4) > input[type=tel]")
-deli_dtls_lcs["complete_purchase"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.checkout_checkout > div > div.steps_steps.checkout_steps > form > section:nth-child(3) > div:nth-child(3) > button")
+deli_dtls_lcs["complete_purchase"] = (By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div/div[2]/div/div[2]/form/section[3]/div[3]/button/input')
 deli_dtls_lcs["buy_more"] = (By.CSS_SELECTOR, "#root > div > div.pages_pages > div.pages_children.false > div > div.checkout_checkout > div > div.checkout_checkout_back_step")
 
 # asserts

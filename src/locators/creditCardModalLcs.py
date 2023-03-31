@@ -33,3 +33,7 @@ credit_card_lcs["year32"] = (By.CSS_SELECTOR, "#expyear > option:nth-child(11)")
 credit_card_lcs["year33"] = (By.CSS_SELECTOR, "#expyear > option:nth-child(12)")
 credit_card_lcs["cvv"] = (By.CSS_SELECTOR, "#cvv")
 credit_card_lcs["submit"] = (By.CSS_SELECTOR, "#btnSubmit")
+
+# asserts
+credit_card_lcs["invalid_card_number_msg"] = (By.CSS_SELECTOR, "#creditError")
+credit_card_lcs[""] = (By.CSS_SELECTOR, "")

@@ -25,7 +25,7 @@ class ChromeDriverSetUp:
         driver.implicitly_wait(5)
         driver.maximize_window()
         driver.get("https://qa.trado.co.il/")
-        self.bank_transfer_modla = BankTransferModal(driver)
+        self.bank_transfer_modal = BankTransferModal(driver)
         self.cart_bar = CartBar(driver)
         self.credit_card_modal = CreditCardModal(driver)
         self.delivery_details_page = DeliveryDetailsPage(driver)
