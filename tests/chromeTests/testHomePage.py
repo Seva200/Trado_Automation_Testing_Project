@@ -86,7 +86,7 @@ class TestHomePage(ChromeDriverSetUp):
     @allure.description("the test is verify, if frozen section button works"
                         " and button title is the same page title that he open")
     def test_frozen_btn(self, driver):
-        assert self.common_actions.get_attribute_by_textcontent(home_lcs["page_title"]) == "קפואים"
+        assert self.common_actions.get_attribute_by_textcontent(home_lcs["cannabis_btn_title"]) == "קפואים"
 
     @allure.description("the test is verify, if cannabis section button works"
                         " and button title is the same page title that he open")
@@ -149,8 +149,7 @@ class TestHomePage(ChromeDriverSetUp):
         self.home_page.right_arrow_click()
         sleep(1)
         self.home_page.slide3_click()
-        driver.switch_to.window(driver.window_handles[1])
-        assert driver.current_url != "https://qa.trado.co.il/"
+        assert self.common_actions.get_attribute_by_class(home_lcs["modal_open"]) == "modal_modalWrapper false modal_open    "
 
     @allure.description("the test is verify, if user can click on 8 slide from slide show")
     def test_slideshow_8link(self, driver):

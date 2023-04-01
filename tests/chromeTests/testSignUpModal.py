@@ -18,7 +18,7 @@ class TestSignUpModal(ChromeDriverSetUp):
         self.sign_up_modal.set_bn_number(f'4030{random.randint(0, 99999)}')
         self.sign_up_modal.accept_policy()
         self.sign_up_modal.log_in_btn_click()
-        sleep(3)
+        sleep(5)
         self.sign_up_modal.set_1_num(code())
         self.sign_up_modal.verify_btn_click()
         self.sign_up_modal.cocktails_btn_click()
@@ -34,7 +34,7 @@ class TestSignUpModal(ChromeDriverSetUp):
         self.sign_up_modal.set_bn_number(f'4030{random.randint(0, 99999)}')
         self.sign_up_modal.accept_policy()
         self.sign_up_modal.log_in_btn_click()
-        sleep(3)
+        sleep(5)
         self.sign_up_modal.set_code(1, 2, 3, 4, 5)
         self.sign_up_modal.verify_btn_click()
         assert self.common_actions.get_attribute_by_textcontent(sign_up_lcs["invalid_code_msg"]) == "failed to login "

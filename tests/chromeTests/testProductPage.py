@@ -17,7 +17,7 @@ class TestProductPage(ChromeDriverSetUp):
         self.welcome_to_modal.choose_coktails()
         self.product_page.click_on_product()
         self.product_page.add_5items()
-        sleep(0.05)
+        sleep(0.07)
         assert self.common_actions.get_attribute_by_value(product_lcs["product_amount_fld"]) == "5"
 
     @allure.description("the test is verify, if user can decrease some count of items")

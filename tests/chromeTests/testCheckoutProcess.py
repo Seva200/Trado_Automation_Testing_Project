@@ -17,8 +17,8 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "jhongrey89@mail.com", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "jhongrey89@mail.com", "Paris",
                                                        "Baget", "3", "a", "2")
         assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["city_adrs_fld"]) == "Paris"
         assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["street_adrs_fld"]) == "Baget"
@@ -56,7 +56,7 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        self.delivery_details_page.set_invoice_details("$3#--", "12345678999", "jhongrey89@mail.com", "Paris",
+        self.delivery_details_page.set_invoice_details("---", "987654321", "jhongrey89@mail.com", "Paris",
                                                        "Baget", "3", "a", "2")
         assert self.common_actions.get_attribute_by_textcontent(
             deli_dtls_lcs["invalid_bn_name_msg"]) == "שם בית העסק לא תקין"
@@ -74,7 +74,7 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
         self.delivery_details_page.set_invoice_details("Pizza Jon", "", "jhongrey89@mail.com", "Paris",
                                                        "Baget", "3", "a", "2")
         assert self.common_actions.get_attribute_by_textcontent(
@@ -93,7 +93,7 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
         self.delivery_details_page.set_invoice_details("Pizza Jon", "2" * 10, "jhongrey89@mail.com", "Paris",
                                                        "Baget", "3", "a", "2")
         assert self.common_actions.get_attribute_by_textcontent(deli_dtls_lcs["invalid_bn_num_msg"]) == "ח.פ לא תקין"
@@ -111,8 +111,8 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "", "Paris",
                                                        "Baget", "3", "a", "2")
         assert self.common_actions.get_attribute_by_textcontent(
             deli_dtls_lcs["invalid_email_msg"]) == " נא למלא שדה זה "
@@ -130,8 +130,8 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "wwqwed34", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "wwqwed34", "Paris",
                                                        "Baget", "3", "a", "2")
         assert self.common_actions.get_attribute_by_textcontent(deli_dtls_lcs["invalid_email_msg"]) == " דוא״ל לא תקין "
         self.delivery_details_page.complete_purchase_btn_click()
@@ -148,8 +148,8 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "jhongrey89@mail.com", "",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "jhongrey89@mail.com", "",
                                                        "Baget", "3", "a", "2")
         assert self.common_actions.get_attribute_by_textcontent(deli_dtls_lcs["invalid_city_msg"]) == " נא למלא שדה זה "
         self.delivery_details_page.complete_purchase_btn_click()
@@ -166,8 +166,8 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "jhongrey89@mail.com", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "jhongrey89@mail.com", "Paris",
                                                        "", "3", "a", "2")
         assert self.common_actions.get_attribute_by_textcontent(
             deli_dtls_lcs["invalid_street_msg"]) == " נא למלא שדה זה "
@@ -178,15 +178,15 @@ class TestCheckoutProcess(ChromeDriverSetUp):
 
     @allure.description("the test is verify, that user can't proceed a purchase,"
                         " when he hasn't set a street number in delivery details")
-    def test_proceed_purchase_with_invalid_streetnum1(self, driver):
+    def test_proceed_purchase_with_invalid_housenum1(self, driver):
         self.sign_in_modal.sign_in()
         self.product_page.add_1item()
         self.cart_bar.check_out_btn_click()
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "jhongrey89@mail.com", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "jhongrey89@mail.com", "Paris",
                                                        "Baget", "", "a", "2")
         assert self.common_actions.get_attribute_by_textcontent(
             deli_dtls_lcs["invalid_house_num_msg"]) == " נא למלא שדה זה "
@@ -197,15 +197,15 @@ class TestCheckoutProcess(ChromeDriverSetUp):
 
     @allure.description("the test is verify, that user can't proceed a purchase,"
                         " when he has set invalid street number in delivery details")
-    def test_proceed_purchase_with_invalid_streetnum2(self, driver):
+    def test_proceed_purchase_with_invalid_housenum2(self, driver):
         self.sign_in_modal.sign_in()
         self.product_page.add_1item()
         self.cart_bar.check_out_btn_click()
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "jhongrey89@mail.com", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "jhongrey89@mail.com", "Paris",
                                                        "Baget", "-4", "a", "2")
         assert self.common_actions.get_attribute_by_textcontent(
             deli_dtls_lcs["invalid_house_num_msg"]) == " ספרות בלבד "
@@ -223,8 +223,8 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "jhongrey89@mail.com", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "jhongrey89@mail.com", "Paris",
                                                        "Baget", "3", "", "2")
         assert self.common_actions.get_attribute_by_textcontent(
             deli_dtls_lcs["invalid_entrance_msg"]) == " נא למלא שדה זה "
@@ -242,8 +242,8 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "jhongrey89@mail.com", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "jhongrey89@mail.com", "Paris",
                                                        "Baget", "3", "a", "")
         assert self.common_actions.get_attribute_by_textcontent(
             deli_dtls_lcs["invalid_floor_msg"]) == " נא למלא שדה זה "
@@ -261,8 +261,8 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "jhongrey89@mail.com", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "jhongrey89@mail.com", "Paris",
                                                        "Baget", "3", "a", "-2")
         assert self.common_actions.get_attribute_by_textcontent(deli_dtls_lcs["invalid_floor_msg"]) == " ספרות בלבד "
         self.delivery_details_page.complete_purchase_btn_click()
@@ -278,8 +278,8 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "jhongrey89@mail.com", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "jhongrey89@mail.com", "Paris",
                                                        "Baget", "3", "a", "2")
         self.delivery_details_page.complete_purchase_btn_click()
         self.payments_methods_page.credit_card_click()
@@ -304,8 +304,8 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "jhongrey89@mail.com", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "jhongrey89@mail.com", "Paris",
                                                        "Baget", "3", "a", "2")
         self.delivery_details_page.complete_purchase_btn_click()
         self.payments_methods_page.credit_card_click()
@@ -327,8 +327,8 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "jhongrey89@mail.com", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "jhongrey89@mail.com", "Paris",
                                                        "Baget", "3", "a", "2")
         self.delivery_details_page.complete_purchase_btn_click()
         self.payments_methods_page.purchase_btn_click()
@@ -344,8 +344,8 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "jhongrey89@mail.com", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "jhongrey89@mail.com", "Paris",
                                                        "Baget", "3", "a", "2")
         self.delivery_details_page.complete_purchase_btn_click()
         self.payments_methods_page.bank_transfer_click()
@@ -364,8 +364,8 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "jhongrey89@mail.com", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "jhongrey89@mail.com", "Paris",
                                                        "Baget", "3", "a", "2")
         self.delivery_details_page.complete_purchase_btn_click()
         self.payments_methods_page.fin_trado_click()
@@ -385,8 +385,8 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "jhongrey89@mail.com", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "jhongrey89@mail.com", "Paris",
                                                        "Baget", "3", "a", "2")
         self.delivery_details_page.complete_purchase_btn_click()
         self.payments_methods_page.digital_check_click()
@@ -407,8 +407,8 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         assert driver.current_url == "https://qa.trado.co.il/checkout"
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["deliv_details_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
-        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "12345678999"
-        self.delivery_details_page.set_invoice_details("Pizza Jon", "12345678999", "jhongrey89@mail.com", "Paris",
+        assert self.common_actions.get_attribute_by_value(deli_dtls_lcs["bn_num_fld"]) == "987654321"
+        self.delivery_details_page.set_invoice_details("Pizza Jon", "987654321", "jhongrey89@mail.com", "Paris",
                                                        "Baget", "3", "a", "2")
         self.delivery_details_page.complete_purchase_btn_click()
         self.payments_methods_page.b2b_click()
