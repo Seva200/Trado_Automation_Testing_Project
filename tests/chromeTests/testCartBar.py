@@ -52,5 +52,5 @@ class TestCartBar(ChromeDriverSetUp):
         assert self.common_actions.get_attribute_by_value(cart_bar_lcs["items_amount_fld"]) == "1"
         self.cart_bar.add_4items()
         self.cart_bar.minus_2items()
-        sleep(0.06)
+        sleep(0.08)
         assert self.common_actions.get_attribute_by_value(cart_bar_lcs["items_amount_fld"]) == "3"

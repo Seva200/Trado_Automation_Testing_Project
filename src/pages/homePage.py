@@ -47,9 +47,9 @@ class HomePage(CommonActions):
     def slide1_click(self):
         CommonActions.click_on_locator(self, home_lcs["slide1"])
     def slide2_click(self):
-        CommonActions.click_on_locator(self, home_lcs["slide3"])
+        CommonActions.click_on_locator(self, home_lcs["slide2"])
     def slide3_click(self):
-        CommonActions.click_on_locator(self, home_lcs["slide4"])
+        CommonActions.click_on_locator(self, home_lcs["slide3"])
     def slide4_click(self):
         CommonActions.click_on_locator(self, home_lcs["slide4"])
     def slide5_click(self):
