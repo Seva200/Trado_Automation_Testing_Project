@@ -1,5 +1,3 @@
-import time
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait as wdw
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.action_chains import ActionChains
@@ -26,6 +24,17 @@ class CommonActions:
         action.move_to_element(element).perform()
         action.click(element)
         action.perform()
+
+    def double_click(self, locator):
+        element = wdw(self.driver, 5).until(ec.invisibility_of_element(locator))
+        action = ActionChains(self.driver)
+        action.move_to_element(element).perform()
+        action.double_click(element)
+        action.perform()
+
+    def get_attribute_by(self, locator, method):
+        attribute = wdw(self.driver, 5).until(ec.visibility_of_element_located(locator)).get_attribute(method)
+        return attribute
 
     def get_attribute_by_innertext(self, locator):
         attribute = wdw(self.driver, 5).until(ec.visibility_of_element_located(locator)).get_attribute("innerText")

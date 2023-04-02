@@ -3,7 +3,7 @@ from src.utils.drivers.chromeDriverSetUp import ChromeDriverSetUp
 from src.locators.signInModalLcs import sign_in_lcs
 from src.locators.homePageLcs import home_lcs
 import allure
-from src.utils.pyMongoSetUp.signInSetUp import sms_code
+from src.utils.pyMongo.signInSetUp import sms_code
 
 
 class TestSignInModal(ChromeDriverSetUp):
@@ -71,6 +71,7 @@ class TestSignInModal(ChromeDriverSetUp):
         assert self.common_actions.get_attribute_by_textcontent(sign_in_lcs["invalid_code_msg"]) == "failed to login "
 
     @allure.description("the test is verify, if facebook link is works")
+    @allure.severity(severity_level='minor')
     def test_facebook_link(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.sign_in_click()
@@ -79,6 +80,7 @@ class TestSignInModal(ChromeDriverSetUp):
         assert "https://www.facebook.com/" in driver.current_url
 
     @allure.description("the test is verify, if google link is works")
+    @allure.severity(severity_level='minor')
     def test_google_link(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.sign_in_click()
@@ -90,6 +92,7 @@ class TestSignInModal(ChromeDriverSetUp):
             sign_in_lcs["google_title"]) != "הגישה חסומה: הבקשה של האפליקציה הזו לא חוקית"
 
     @allure.description("the test is verify, if twitter link is works")
+    @allure.severity(severity_level='minor')
     def test_twitter_link(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.sign_in_click()

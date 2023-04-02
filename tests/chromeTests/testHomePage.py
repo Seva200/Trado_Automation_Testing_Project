@@ -57,6 +57,7 @@ class TestHomePage(ChromeDriverSetUp):
 
     @allure.description("the test is verify, if sales section button works"
                         " and button title is the same page title that he open")
+    @allure.severity(severity_level='minor')
     def test_sales_btn(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.sales_btn_click()
@@ -64,6 +65,7 @@ class TestHomePage(ChromeDriverSetUp):
 
     @allure.description("the test is verify, if dry products section button works"
                         " and button title is the same page title that he open")
+    @allure.severity(severity_level='minor')
     def test_dry_products_btn(self, driver):
         self.welcome_to_modal.x_btn_click()
         self.home_page.dry_products_click()
@@ -71,25 +73,33 @@ class TestHomePage(ChromeDriverSetUp):
 
     @allure.description("the test is verify, if beauty section button works"
                         " and button title is the same page title that he open")
+    @allure.severity(severity_level='minor')
     def test_beauty_products_btn(self, driver):
         self.welcome_to_modal.x_btn_click()
-        self.home_page.beauty_products_click()
-        assert self.common_actions.get_attribute_by_textcontent(home_lcs["page_title"]) == "מוצרי טיפוח"
+        self.home_page.beer_products_click()
+        self.welcome_to_modal.x_btn_click()
+        assert self.common_actions.get_attribute_by_textcontent(home_lcs["page_title"]) == "בירות "
+        assert "beer" in self.common_actions.get_attribute_by_textcontent(home_lcs["product_from_beer_pg"])
+
 
     @allure.description("the test is verify, if sweet and snacks section button works"
                         " and button title is the same page title that he open")
+    @allure.severity(severity_level='minor')
     def test_sweets_and_snacks_btn(self, driver):
         self.welcome_to_modal.x_btn_click()
         self.home_page.sweets_and_snacks_click()
-        assert self.common_actions.get_attribute_by_textcontent(home_lcs["page_title"]) == "ממתקים וחטיפים"
+        assert self.common_actions.get_attribute_by_textcontent(home_lcs["page_title"]) == "חטיפים "
+
 
     @allure.description("the test is verify, if frozen section button works"
                         " and button title is the same page title that he open")
+    @allure.severity(severity_level='minor')
     def test_frozen_btn(self, driver):
         assert self.common_actions.get_attribute_by_textcontent(home_lcs["cannabis_btn_title"]) == "קפואים"
 
     @allure.description("the test is verify, if cannabis section button works"
                         " and button title is the same page title that he open")
+    @allure.severity(severity_level='minor')
     def test_cannabis_click(self, driver):
         self.welcome_to_modal.x_btn_click()
         self.home_page.cannabis_click()
@@ -97,6 +107,7 @@ class TestHomePage(ChromeDriverSetUp):
 
     @allure.description("the test is verify, if cleaners section button works"
                         " and button title is the same page title that he open")
+    @allure.severity(severity_level='minor')
     def test_cleaners_btn_click(self, driver):
         self.welcome_to_modal.x_btn_click()
         self.home_page.cleaners_click()
@@ -104,6 +115,7 @@ class TestHomePage(ChromeDriverSetUp):
 
     @allure.description("the test is verify, if drinks section button works"
                         " and button title is the same page title that he open")
+    @allure.severity(severity_level='minor')
     def test_drinks_btn(self, driver):
         self.welcome_to_modal.x_btn_click()
         self.home_page.drinks_click()
@@ -121,6 +133,7 @@ class TestHomePage(ChromeDriverSetUp):
     # Body
     # Slide Show
     @allure.description('the test is verify, if user can change slide by click on arrow in slide show')
+    @allure.severity(severity_level='minor')
     def test_left_arrow_btn(self, driver):
         self.welcome_to_modal.x_btn_click()
         assert self.common_actions.get_attribute_by_class(home_lcs["slide1"]) == "slide selected"
@@ -128,6 +141,7 @@ class TestHomePage(ChromeDriverSetUp):
         assert self.common_actions.get_attribute_by_class(home_lcs["slide8"]) == "slide selected"
 
     @allure.description('the test is verify, if user can change slide by click on arrow in slide show')
+    @allure.severity(severity_level='minor')
     def test_right_arrow_btn(self, driver):
         self.welcome_to_modal.x_btn_click()
         assert self.common_actions.get_attribute_by_class(home_lcs["slide1"]) == "slide selected"
@@ -135,6 +149,7 @@ class TestHomePage(ChromeDriverSetUp):
         assert self.common_actions.get_attribute_by_class(home_lcs["slide2"]) == "slide selected"
 
     @allure.description("the test is verify, if user can click on 1 slide from slide show")
+    @allure.severity(severity_level='minor')
     def test_slideshow_1link(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.slide1_click()
@@ -143,6 +158,7 @@ class TestHomePage(ChromeDriverSetUp):
         assert "MAX" in self.common_actions.get_attribute_by_textcontent(home_lcs["max_card_modal"])
 
     @allure.description("the test is verify, if user can click on 3 slide from slide show")
+    @allure.severity(severity_level='minor')
     def test_slideshow_3link(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.right_arrow_click()
@@ -152,6 +168,7 @@ class TestHomePage(ChromeDriverSetUp):
         assert self.common_actions.get_attribute_by_class(home_lcs["modal_open"]) == "modal_modalWrapper false modal_open    "
 
     @allure.description("the test is verify, if user can click on 8 slide from slide show")
+    @allure.severity(severity_level='minor')
     def test_slideshow_8link(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.left_arrow_click()
@@ -161,6 +178,7 @@ class TestHomePage(ChromeDriverSetUp):
         assert driver.current_url == "https://www.max.co.il/cards/card/8649"
 
     @allure.description("the test is verify, if tell me more link is work")
+    @allure.severity(severity_level='minor')
     def test_tell_me_more_link(self, driver):
         self.welcome_to_modal.x_btn_click()
         self.home_page.tell_me_more_click()
@@ -170,6 +188,7 @@ class TestHomePage(ChromeDriverSetUp):
             home_lcs["sign_in_modal_title"]) == "ברוכים השבים! מתרגשים לראות אתכם כאן"
 
     @allure.description("the test is verify, if user can change the product list view")
+    @allure.severity(severity_level='minor')
     def test_product_list_1view(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.list_view1_click()
@@ -177,19 +196,34 @@ class TestHomePage(ChromeDriverSetUp):
             home_lcs["product_list_actv"]) == "icon_wrapper productsList_active"
 
     @allure.description("the test is verify, if user can change the product list view")
+    @allure.severity(severity_level='minor')
     def test_product_list_2view(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.list_view2_click()
         assert self.common_actions.get_attribute_by_class(
             home_lcs["product_list_actv"]) == "icon_wrapper productsList_active"
 
+    @allure.description("the test is verify, if user can sort the product list by price from low to high")
+    def test_sort_list_low_to_high(self, driver):
+        self.welcome_to_modal.choose_coktails()
+        sleep(2)
+        self.home_page.low_to_high_price_click()
+        sleep(2)
+        a = "279"
+        b = "269"
+        assert a in self.common_actions.get_attribute_by(home_lcs["gorilla_prod"], "textContent")
+        assert b in self.common_actions.get_attribute_by(home_lcs["alfa_oil_prod"], "textContent")
+        assert int(a) < int(b)
+
     @allure.description("the test is verify, if max card link is work")
+    @allure.severity(severity_level='minor')
     def test_max_card_link(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.max_card_link_click()
         assert driver.current_url == "https://www.max.co.il/cards/card/8649"
 
     @allure.description("the test is verify, if common questions link is work")
+    @allure.severity(severity_level='minor')
     def test_common_questions_bd_link(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.common_questions_bd_link()
@@ -198,6 +232,7 @@ class TestHomePage(ChromeDriverSetUp):
             home_lcs["questions_pg_title"]) == "יש לכם שאלות ? הגעתם למקום הנכון"
 
     @allure.description("the test is verify, if contact us link is work")
+    @allure.severity(severity_level='minor')
     def test_contact_us_bd_link(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.contact_us_bd_link()
@@ -206,6 +241,7 @@ class TestHomePage(ChromeDriverSetUp):
             home_lcs["contact_pg_title"]) == "נשמח לעמוד לרשותך בכל שאלה, בקשה או הערה."
 
     @allure.description("the test is verify, if how shipment works link is work")
+    @allure.severity(severity_level='minor')
     def test_shipment_works_bd_link(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.shipment_works_bd_link()
@@ -216,6 +252,7 @@ class TestHomePage(ChromeDriverSetUp):
     # Footer
     # Importants
     @allure.description("the test is verify, if who we are link is work")
+    @allure.severity(severity_level='minor')
     def test_who_we_are_link(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.who_we_are_link()
@@ -223,6 +260,7 @@ class TestHomePage(ChromeDriverSetUp):
         assert driver.current_url == "https://www.trado.co.il/page"
 
     @allure.description("the test is verify, if personal area link is work")
+    @allure.severity(severity_level='minor')
     def test_personal_area_link(self, driver):
         self.welcome_to_modal.choose_coktails()
         assert self.common_actions.set_locator(home_lcs["product_list_actv"])
@@ -235,6 +273,7 @@ class TestHomePage(ChromeDriverSetUp):
 
     # Additionals
     @allure.description("the test is verify, if common questions link is work")
+    @allure.severity(severity_level='minor')
     def test_common_questions_ftr_link(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.common_questions_ftr_link()
@@ -243,6 +282,7 @@ class TestHomePage(ChromeDriverSetUp):
             home_lcs["questions_pg_title"]) == "יש לכם שאלות ? הגעתם למקום הנכון"
 
     @allure.description("the test is verify, if max card link is work")
+    @allure.severity(severity_level='minor')
     def test_max_for_business_link(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.max_for_business_link()
@@ -251,6 +291,7 @@ class TestHomePage(ChromeDriverSetUp):
 
     # Stay in Touch
     @allure.description("the test is verify, if facebook link is work")
+    @allure.severity(severity_level='minor')
     def test_facebook_link(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.facebook_link()
@@ -258,6 +299,7 @@ class TestHomePage(ChromeDriverSetUp):
         assert driver.current_url == "https://www.facebook.com/"
 
     @allure.description("the test is verify, if instagram link is work")
+    @allure.severity(severity_level='minor')
     def test_instagram_link(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.instagram_link()

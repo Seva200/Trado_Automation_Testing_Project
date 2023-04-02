@@ -66,6 +66,7 @@ class TestPersonalAreaPage(ChromeDriverSetUp):
             personal_area_lcs["city_&_street_fld"]) == "Paris baget street"
 
     @allure.description("the test is verify, verify if we are here link is work")
+    @allure.severity(severity_level='minor')
     def test_link_we_are_here(self, driver):
         self.sign_in_modal.sign_in()
         self.home_page.personal_area_hdr_click()
