@@ -20,6 +20,7 @@ class ProductPage(CommonActions):
         ProductPage.plus_btn_click(self)
 
     def add_5items(self):
+        ProductPage.click_on_product(self)
         count = 0
         while count < 5:
             ProductPage.plus_btn_click(self)

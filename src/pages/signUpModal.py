@@ -4,8 +4,8 @@ from src.locators.signUpModalLcs import sign_up_lcs
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait as wdw
 from selenium.webdriver.support import expected_conditions as ec
-from src.utils.pyMongoSetUp.signUpSetUp import phone_num
-from src.utils.pyMongoSetUp.signUpSetUp import code
+from src.utils.pyMongo.signUpSetUp import phone_num
+from src.utils.pyMongo.signUpSetUp import code
 
 class SignUpModal(CommonActions):
 # Page 1

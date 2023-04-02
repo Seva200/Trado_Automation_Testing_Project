@@ -1,7 +1,7 @@
 from time import sleep
 from src.utils.drivers.chromeDriverSetUp import ChromeDriverSetUp
-from src.locators.deliveryDetailsPageLcs import deli_dtls_lcs
-from src.locators.paymentsMethodsPageLcs import payments_mthds_lcs
+from src.locators.deliveryDetailsSectionLcs import deli_dtls_lcs
+from src.locators.paymentsMethodsSectionLcs import payments_mthds_lcs
 from src.locators.homePageLcs import home_lcs
 from src.locators.creditCardModalLcs import credit_card_lcs
 import allure
@@ -29,6 +29,16 @@ class TestCheckoutProcess(ChromeDriverSetUp):
         sleep(1)
         assert self.common_actions.get_attribute_by_class(deli_dtls_lcs["payments_methods_status"]) \
                == "orderTimeline_time orderTimeline_current orderTimeline_current "
+
+    @allure.description("the test is verify, that all elements of the delivery details section"
+                        "will be changed to english, after click on change language button")
+    def test_elements_visability_after_language_change(self, driver):
+        self.sign_in_modal.sign_in()
+        self.product_page.add_1item()
+        self.cart_bar.check_out_btn_click()
+        self.home_page.change_language_btn()
+        sleep(1)
+        assert self.common_actions.get_attribute_by_textcontent(deli_dtls_lcs["phone"]) == "phone"
 
     @allure.description("the test is verify, that user can't proceed a purchase,"
                         " when he hasn't set a business name in delivery details")
@@ -332,7 +342,7 @@ class TestCheckoutProcess(ChromeDriverSetUp):
                                                        "Baget", "3", "a", "2")
         self.delivery_details_page.complete_purchase_btn_click()
         self.payments_methods_page.purchase_btn_click()
-        sleep(2)
+        sleep(1)
         assert self.common_actions.get_attribute_by_class(
             deli_dtls_lcs["order_summery_status"]) != "orderTimeline_time orderTimeline_full orderTimeline_current "
 

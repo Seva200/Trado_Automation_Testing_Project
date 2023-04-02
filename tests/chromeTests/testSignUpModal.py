@@ -2,7 +2,7 @@ from time import sleep
 import random
 import allure
 from src.utils.drivers.chromeDriverSetUp import ChromeDriverSetUp
-from src.utils.pyMongoSetUp.signUpSetUp import phone_num, code
+from src.utils.pyMongo.signUpSetUp import phone_num, code
 from src.locators.signUpModalLcs import sign_up_lcs
 from src.locators.homePageLcs import home_lcs
 

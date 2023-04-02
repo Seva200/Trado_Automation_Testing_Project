@@ -3,9 +3,9 @@ from selenium import webdriver
 from src.pages.bankTransferModal import BankTransferModal
 from src.pages.cartBar import CartBar
 from src.pages.creditCardModal import CreditCardModal
-from src.pages.deliveryDetailsPage import DeliveryDetailsPage
+from src.pages.deliveryDetailsSection import DeliveryDetailsSection
 from src.pages.homePage import HomePage
-from src.pages.paymentsMethodsPage import PaymentsMethodsPage
+from src.pages.paymentsMethodsSection import PaymentsMethodsSection
 from src.pages.personalAreaPage import PersonalAreaPage
 from src.pages.productPage import ProductPage
 from src.pages.signInModal import SignInModal
@@ -27,9 +27,9 @@ class EdgeDriverSetUp:
         self.bank_transfer_modla = BankTransferModal(driver)
         self.cart_bar = CartBar(driver)
         self.credit_card_modal = CreditCardModal(driver)
-        self.delivery_details_page = DeliveryDetailsPage(driver)
+        self.delivery_details_page = DeliveryDetailsSection(driver)
         self.home_page = HomePage(driver)
-        self.payments_methods_page = PaymentsMethodsPage(driver)
+        self.payments_methods_page = PaymentsMethodsSection(driver)
         self.personal_area_page = PersonalAreaPage(driver)
         self.product_page = ProductPage(driver)
         self.sign_in_modal = SignInModal(driver)

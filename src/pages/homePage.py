@@ -25,7 +25,7 @@ class HomePage(CommonActions):
         CommonActions.click_on_locator(self, home_lcs["section1"])
     def dry_products_click(self):
         CommonActions.click_on_locator(self, home_lcs["section2"])
-    def beauty_products_click(self):
+    def beer_products_click(self):
         CommonActions.click_on_locator(self, home_lcs["section3"])
     def sweets_and_snacks_click(self):
         CommonActions.click_on_locator(self, home_lcs["section4"])

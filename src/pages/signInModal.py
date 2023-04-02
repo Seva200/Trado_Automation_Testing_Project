@@ -1,9 +1,11 @@
+import time
+
 from src.utils.commonActions import CommonActions
 from src.locators.signInModalLcs import sign_in_lcs
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait as wdw
 from selenium.webdriver.support import expected_conditions as ec
-from src.utils.pyMongoSetUp.signInSetUp import sms_code
+from src.utils.pyMongo.signInSetUp import sms_code
 class SignInModal(CommonActions):
     def sign_in_btn_click(self):
         CommonActions.click_on_visible_locator_ac(self, sign_in_lcs["sign_in_btn"])
@@ -46,6 +48,7 @@ class SignInModal(CommonActions):
     def resent_msg_btn(self):
         CommonActions.click_on_visible_locator_ac(self, sign_in_lcs["resent_msg_btn"])
     def sign_in(self):
+        wdw(self.driver, 5).until(ec.visibility_of_element_located((By.XPATH, '//*[@id="root"]/div/div[4]/div/div/div/div[3]/div[1]'))).click()
         wdw(self.driver, 5).until(ec.visibility_of_element_located((By.XPATH, "/html/body/div/div/div[4]/div/div/div/button"))).click()
         wdw(self.driver, 5).until(ec.visibility_of_element_located((By.XPATH, "/html/body/div/div/div[2]/div[2]/div/div/div[1]/div/div/div[2]/a/span"))).click()
         SignInModal.set_phone_num(self, "0552603210")

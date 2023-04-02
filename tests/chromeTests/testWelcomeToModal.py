@@ -5,6 +5,7 @@ from src.locators.homePageLcs import home_lcs
 
 class TestWelcomeToModal(ChromeDriverSetUp):
     @allure.description("the test is verify, if user can close the welcome to modal without choose interest ")
+    @allure.severity(severity_level='minor')
     def test_x_btn(self, driver):
         assert self.common_actions.get_attribute_by_class(
             home_lcs["modal_open"]) == "modal_modalWrapper false modal_open    "
