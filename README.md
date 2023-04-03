@@ -19,6 +19,8 @@ Meaning I had to assess how valid is the website to operate successfully?
 * Checkout Page(Delivery Details, Payments Methods)
 * Credit Card Modal
 * Bank Transfer Modal
+* Database tests
+* API tests
 
 ### You are welcomed to dig in my project and look for the tests and bugs.
 * locators is a file which indexes elements in the webpage
@@ -34,4 +36,4 @@ Meaning I had to assess how valid is the website to operate successfully?
 * Browsers: Google Chrome, Microsoft Edge 
 * Operating System: Windows 11
 
-## [Link to Google Sheets](https://docs.google.com/spreadsheets/d/1n7pudH_XaLxSmlHMRlJcMWt7z7ga_7JFe1yiUrHZi-c/edit?usp=share_link)
+
