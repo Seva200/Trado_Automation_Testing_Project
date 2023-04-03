@@ -343,3 +343,4 @@ class TestHomePage(EdgeDriverSetUp):
         self.welcome_to_modal.choose_coktails()
         self.home_page.accessibility_statement_link()
         assert driver.current_url == "https://qa.trado.co.il/info/%D7%94%D7%A6%D7%94%D7%A8%D7%AA%20%D7%A0%D7%92%D7%99%D7%A9%D7%95%D7%AA"
+        assert self.common_actions.set_locator(home_lcs["accessibility_statement_title"])
