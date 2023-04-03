@@ -221,7 +221,7 @@ class TestHomePage(ChromeDriverSetUp):
         b = str(new_list2[2]) + str(new_list2[3]) + str(new_list2[4])
         assert a < b
 
-    @allure.description("the test is verify, if user can sort the product list by price from low to high")
+    @allure.description("the test is verify, if user can sort the product list by price from high to low")
     def test_sort_list_high_to_low(self, driver):
         self.welcome_to_modal.choose_coktails()
         self.home_page.high_to_low_price_click()
