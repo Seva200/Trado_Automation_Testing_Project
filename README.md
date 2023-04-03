@@ -36,4 +36,4 @@ Meaning I had to assess how valid is the website to operate successfully?
 * Browsers: Google Chrome, Microsoft Edge 
 * Operating System: Windows 11
 
-
+## [Google Sheets Link](https://docs.google.com/spreadsheets/d/1n7pudH_XaLxSmlHMRlJcMWt7z7ga_7JFe1yiUrHZi-c/edit?usp=share_link)
