@@ -81,7 +81,6 @@ class TestHomePage(ChromeDriverSetUp):
         assert self.common_actions.get_attribute_by_textcontent(home_lcs["page_title"]) == "בירות "
         assert "beer" in self.common_actions.get_attribute_by_textcontent(home_lcs["product_from_beer_pg"])
 
-
     @allure.description("the test is verify, if sweet and snacks section button works"
                         " and button title is the same page title that he open")
     @allure.severity(severity_level='minor')
@@ -89,7 +88,6 @@ class TestHomePage(ChromeDriverSetUp):
         self.welcome_to_modal.x_btn_click()
         self.home_page.sweets_and_snacks_click()
         assert self.common_actions.get_attribute_by_textcontent(home_lcs["page_title"]) == "חטיפים "
-
 
     @allure.description("the test is verify, if frozen section button works"
                         " and button title is the same page title that he open")
@@ -165,7 +163,8 @@ class TestHomePage(ChromeDriverSetUp):
         self.home_page.right_arrow_click()
         sleep(1)
         self.home_page.slide3_click()
-        assert self.common_actions.get_attribute_by_class(home_lcs["modal_open"]) == "modal_modalWrapper false modal_open    "
+        assert self.common_actions.get_attribute_by_class(
+            home_lcs["modal_open"]) == "modal_modalWrapper false modal_open    "
 
     @allure.description("the test is verify, if user can click on 8 slide from slide show")
     @allure.severity(severity_level='minor')
@@ -206,14 +205,42 @@ class TestHomePage(ChromeDriverSetUp):
     @allure.description("the test is verify, if user can sort the product list by price from low to high")
     def test_sort_list_low_to_high(self, driver):
         self.welcome_to_modal.choose_coktails()
-        sleep(2)
         self.home_page.low_to_high_price_click()
-        sleep(2)
-        a = "279"
-        b = "269"
-        assert a in self.common_actions.get_attribute_by(home_lcs["gorilla_prod"], "textContent")
-        assert b in self.common_actions.get_attribute_by(home_lcs["alfa_oil_prod"], "textContent")
-        assert int(a) < int(b)
+        sleep(1)
+        a = self.common_actions.get_attribute_by(home_lcs["gorilla_prod_price"], "textContent").encode("utf-8")
+        b = self.common_actions.get_attribute_by(home_lcs["alfa_oil_prod_price"], "textContent").encode("utf-8")
+        a = str(a)
+        b = str(b)
+        new_list1 = []
+        for i in a:
+            new_list1.append(i)
+        a = str(new_list1[2]) + str(new_list1[3]) + str(new_list1[4])
+        new_list2 = []
+        for i in b:
+            new_list2.append(i)
+        b = str(new_list2[2]) + str(new_list2[3]) + str(new_list2[4])
+        assert a < b
+
+    @allure.description("the test is verify, if user can sort the product list by price from low to high")
+    def test_sort_list_high_to_low(self, driver):
+        self.welcome_to_modal.choose_coktails()
+        self.home_page.high_to_low_price_click()
+        sleep(1)
+        a = self.common_actions.get_attribute_by(home_lcs["dog_prod_price"], "textContent").encode("utf-8")
+        b = self.common_actions.get_attribute_by(home_lcs["goats_milk_prod_price"], "textContent").encode("utf-8")
+        a = str(a)
+        b = str(b)
+        new_list1 = []
+        for i in a:
+            new_list1.append(i)
+        a = str(new_list1[2]) + str(new_list1[3]) + str(new_list1[4])
+        print(a)
+        new_list2 = []
+        for i in b:
+            new_list2.append(i)
+        b = str(new_list2[2]) + str(new_list2[3]) + str(new_list2[4]) + str(new_list2[5]) + str(new_list2[6])
+        print(b)
+        assert a > b
 
     @allure.description("the test is verify, if max card link is work")
     @allure.severity(severity_level='minor')
