@@ -17,14 +17,15 @@ Meaning I had to assess how valid is the website to operate successfully?
 * Sign Up Modal
 * Product Page
 * Checkout Page(Delivery Details, Payments Methods)
-* Credit Cart Modal
+* Credit Card Modal
 * Bank Transfer Modal
 
 ### You are welcomed to dig in my project and look for the tests and bugs.
-* Pages folder contains functions relevant for certain pages 
-* Tests folder contains the test suites and test cases for each requirement 
-* utils.py is a file which takes in the imports 
-* locators.py is a file which indexes elements in the webpage
+* locators is a file which indexes elements in the webpage
+* pages folder contains functions relevant for certain pages 
+* utils is a package that has a driver set up, a database set up, and a common action file with functions that I use often
+* tests folder contains the test suites and test cases for each requirement 
+
 
 ### Software and Hardware requirements
 * Python Version: 3.10 
@@ -33,3 +34,4 @@ Meaning I had to assess how valid is the website to operate successfully?
 * Browsers: Google Chrome, Microsoft Edge 
 * Operating System: Windows 11
 
+## [Link to Google Sheets](https://docs.google.com/spreadsheets/d/1n7pudH_XaLxSmlHMRlJcMWt7z7ga_7JFe1yiUrHZi-c/edit?usp=share_link)
