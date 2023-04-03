@@ -2,7 +2,6 @@ from time import sleep
 from src.utils.drivers.chromeDriverSetUp import ChromeDriverSetUp
 from src.locators.cartBarLcs import cart_bar_lcs
 from src.locators.productPageLcs import product_lcs
-from selenium.webdriver.common.by import By
 import allure
 
 

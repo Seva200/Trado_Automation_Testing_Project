@@ -31,6 +31,7 @@ class TestDB(ChromeDriverSetUp):
         self.personal_area_page.set_email("joshgrey89@mail.com")
         self.personal_area_page.set_bn_id_num("987654321")
         self.personal_area_page.save_btn_click()
+
     @allure.description("the test is verify, that invalid purchase didn't saved in db")
     def test_invalid_purchase_saved_in_db(self, driver):
         self.sign_in_modal.sign_in()
@@ -40,9 +41,8 @@ class TestDB(ChromeDriverSetUp):
         self.payments_methods_section.purchase_btn_click()
         time.sleep(2)
         a = self.common_actions.get_attribute_by(payments_mthds_lcs["order_number"],
-                                                            "textContent").encode('utf-8')
+                                                 "textContent").encode('utf-8')
         a = str(a)
         order_number = a[-5] + a[-4] + a[-3] + a[-2]
         order_status = db.get_order_status(order_number)
         assert order_status != 'received'
-
