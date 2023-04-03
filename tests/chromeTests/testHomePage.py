@@ -211,14 +211,8 @@ class TestHomePage(ChromeDriverSetUp):
         b = self.common_actions.get_attribute_by(home_lcs["alfa_oil_prod_price"], "textContent").encode("utf-8")
         a = str(a)
         b = str(b)
-        new_list1 = []
-        for i in a:
-            new_list1.append(i)
-        a = str(new_list1[2]) + str(new_list1[3]) + str(new_list1[4])
-        new_list2 = []
-        for i in b:
-            new_list2.append(i)
-        b = str(new_list2[2]) + str(new_list2[3]) + str(new_list2[4])
+        a = a[2] + a[3] + a[4]
+        b = b[2] + b[3] + b[4]
         assert a < b
 
     @allure.description("the test is verify, if user can sort the product list by price from high to low")
@@ -230,16 +224,8 @@ class TestHomePage(ChromeDriverSetUp):
         b = self.common_actions.get_attribute_by(home_lcs["goats_milk_prod_price"], "textContent").encode("utf-8")
         a = str(a)
         b = str(b)
-        new_list1 = []
-        for i in a:
-            new_list1.append(i)
-        a = str(new_list1[2]) + str(new_list1[3]) + str(new_list1[4])
-        print(a)
-        new_list2 = []
-        for i in b:
-            new_list2.append(i)
-        b = str(new_list2[2]) + str(new_list2[3]) + str(new_list2[4]) + str(new_list2[5]) + str(new_list2[6])
-        print(b)
+        a = a[2] + a[3] + a[4]
+        b = b[2] + b[3] + b[4] + b[5]
         assert a > b
 
     @allure.description("the test is verify, if max card link is work")
